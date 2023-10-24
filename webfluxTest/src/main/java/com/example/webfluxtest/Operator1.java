@@ -1,5 +1,6 @@
 package com.example.webfluxtest;
 
+import java.time.Duration;
 import reactor.core.publisher.Flux;
 
 public class Operator1 {
@@ -30,6 +31,7 @@ public class Operator1 {
     public Flux<Integer> fluxFlatMap() {
         return Flux.range(1,10)
                 .flatMap(i -> Flux.range(i*10, 10))
+                .delayElements(Duration.ofMillis(100))
                 .log();
     }
 
