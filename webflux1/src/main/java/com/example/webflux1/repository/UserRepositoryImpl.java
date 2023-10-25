@@ -3,9 +3,11 @@ package com.example.webflux1.repository;
 import java.time.LocalDateTime;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     private final ConcurrentHashMap<Long, User> userHashMap = new ConcurrentHashMap<>();
