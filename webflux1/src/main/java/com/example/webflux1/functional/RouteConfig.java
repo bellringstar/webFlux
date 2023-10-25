@@ -1,4 +1,4 @@
-package com.example.webflux1;
+package com.example.webflux1.functional;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.example.webflux1;
+package com.example.webflux1.functional;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
