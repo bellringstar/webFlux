@@ -1,7 +1,5 @@
 package com.example.webfluxtest;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 import reactor.test.StepVerifier;
 
