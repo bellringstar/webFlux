@@ -2,8 +2,10 @@ package com.example.webflux1.service;
 
 import com.example.webflux1.client.PostClient;
 import com.example.webflux1.dto.PostResponse;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
@@ -16,4 +18,8 @@ public class PostService {
         return postClient.getPost(id);
     }
 
+    public Flux<PostResponse> getMultiplePostContent(List<Long> idList) {
+        return Flux.fromIterable(idList)
+                .flatMap(this::getPostContent);
+    }
 }

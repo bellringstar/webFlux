@@ -16,7 +16,8 @@ public class MvcApplication {
     }
 
     @GetMapping("/posts/{id}")
-    public Map<String, String> getPosts(@PathVariable Long id) {
+    public Map<String, String> getPosts(@PathVariable Long id) throws InterruptedException {
+        Thread.sleep(3000);
         return Map.of("id", id.toString(), "content", "Posts content is %d".formatted(id));
     }
 }
